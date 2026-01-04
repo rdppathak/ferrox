@@ -1,11 +1,17 @@
+[workspace]
+members = ["ferrox-macros", "."]
+
 [package]
 name = "ferrox"
 version = "0.1.0"
 edition = "2024"
 
-[lib]
-proc-macro = true
-
 [dependencies]
-syn = { version = "2.0", features = ["full"] }
-quote = "1.0"
+ferrox-macros = { path = "ferrox-macros" }
+axum = "0.7"
+inventory = "0.3"
+lazy_static = "1.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+tower = "0.4"
